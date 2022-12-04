@@ -137,9 +137,11 @@ export MAVEN_OPTS="-Xms256m -Xmx1024m -Dfile.encoding=UTF-8"
 alias gitlog="git log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset' --all"
 alias gitclear="git branch --merged origin/master | egrep -v \"(^\\*|master|deploy-test)\" | xargs git branch -d"
 
-
+# starship
+export STARSHIP_CONFIG="$HOME/dotfiles/startship.toml"
 eval "$(starship init zsh)"
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # 加载本地配置
