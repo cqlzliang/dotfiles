@@ -1,0 +1,13 @@
+# dotbot config file
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: dot_zshrc
+    ~/.gitconfig: dot_gitconfig
+
+- shell:
+  - [sh ~/dotfiles/script/install.sh, Installing basic sotware]
