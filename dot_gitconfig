@@ -10,6 +10,7 @@
 [include]
     path = ~/dotfiles/local_gitconfig
 [alias]
+    localCfg = config -f ~/dotfiles/local_gitconfig
     mg = merge
     mc = merge --continue
     ma = merge --abort
