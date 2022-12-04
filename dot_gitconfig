@@ -7,7 +7,8 @@
 [core]
     excludesfile = ~/.gitignore.global
     pager = less -r
-
+[include]
+    path = ~/dotfiles/local_gitconfig
 [alias]
     mg = merge
     mc = merge --continue
@@ -19,8 +20,8 @@
     cb = checkout -b
     cm = commit
     cma = commit --amend
-    dc = diff --cached
     ca = commit --amend
+    dc = diff --cached
     fu = submodule foreach 'git checkout master && git pull'
     rb = rebase
     rc = rebase --continue
