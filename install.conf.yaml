@@ -8,6 +8,7 @@
 - link:
     ~/.zshrc: dot_zshrc
     ~/.gitconfig: dot_gitconfig
-
+- create:
+    - ~/.config.local
 - shell:
   - [sh ~/dotfiles/script/install.sh, Installing basic sotware]

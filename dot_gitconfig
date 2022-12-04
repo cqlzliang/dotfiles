@@ -8,9 +8,9 @@
     excludesfile = ~/.gitignore.global
     pager = less -r
 [include]
-    path = ~/dotfiles/local_gitconfig
+    path = ~/.config.local/local_gitconfig
 [alias]
-    localCfg = config -f ~/dotfiles/local_gitconfig
+    localCfg = config -f ~/.config.local/local_gitconfig
     mg = merge
     mc = merge --continue
     ma = merge --abort

@@ -145,6 +145,6 @@ eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # 加载本地配置
-if [[ -f $HOME/dotfiles/localEnv.sh ]]; then 
-    source $HOME/dotfiles/localEnv.sh
+if [[ -f ~/.config.local/localEnv.sh ]]; then 
+    source ~/.config.local/localEnv.sh
 fi
