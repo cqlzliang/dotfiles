@@ -133,13 +133,6 @@ alias unproxy='unset all_proxy'
 # maven 参考链接: https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=35719069
 export MAVEN_OPTS="-Xms256m -Xmx1024m -Dfile.encoding=UTF-8" 
 
-# thrift 配置
-export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
-export PATH=$PATH:/Users/lizongliang/code/fenbi-code-tool/bin
-
-# Java home
-export JAVA_HOME=/Users/lizongliang/Library/Java/JavaVirtualMachines/corretto-1.8.0_332/Contents/Home
-
 # git 
 alias gitlog="git log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset' --all"
 alias gitclear="git branch --merged origin/master | egrep -v \"(^\\*|master|deploy-test)\" | xargs git branch -d"
