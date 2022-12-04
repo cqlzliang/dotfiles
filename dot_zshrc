@@ -71,11 +71,7 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions fasd zsh-syntax-highlighting)
-
-# fasd 别名
-eval "$(fasd --init auto)"
-alias j='fasd_cd -d'
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,7 +111,7 @@ function start_agent {
     echo succeeded
     chmod 600 "${SSH_ENV}"
     . "${SSH_ENV}" > /dev/null
-    /usr/bin/ssh-add;
+    /usr/bin/ssh-add --apple-use-keychain;
 }
  
 # Source SSH settings, if applicable
@@ -141,9 +137,6 @@ export MAVEN_OPTS="-Xms256m -Xmx1024m -Dfile.encoding=UTF-8"
 export PATH="/usr/local/opt/thrift@0.9/bin:$PATH"
 export PATH=$PATH:/Users/lizongliang/code/fenbi-code-tool/bin
 
-# ssh key
-ssh-add --apple-use-keychain /Users/lizongliang/.ssh/id_ed25519
-
 # Java home
 export JAVA_HOME=/Users/lizongliang/Library/Java/JavaVirtualMachines/corretto-1.8.0_332/Contents/Home
 
@@ -155,3 +148,8 @@ alias gitclear="git branch --merged origin/master | egrep -v \"(^\\*|master|depl
 eval "$(starship init zsh)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# 加载本地配置
+if [[ -f $HOME/dotfiles/localEnv.sh ]]; then 
+    source $HOME/dotfiles/localEnv.sh
+fi
