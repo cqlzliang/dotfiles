@@ -1,0 +1,35 @@
+[user]
+    name = lizongliangbj;
+    email = lizongliangbj@kanyun.com
+[color]
+    ui = true
+    diff = true
+    status = true
+    branch = true
+    interactive = true
+[core]
+    excludesfile = ~/.gitignore.global
+    pager = less -r
+
+[alias]
+    mg = merge
+    mc = merge --continue
+    ma = merge --abort
+    bd = branch -D
+    bl = branch -vv --all
+    ft = fetch --prune
+    co = checkout
+    cb = checkout -b
+    cm = commit
+    cma = commit --amend
+    dc = diff --cached
+    ca = commit --amend
+    fu = submodule foreach 'git checkout master && git pull'
+    rb = rebase
+    rc = rebase --continue
+    ri = rebase -i
+    ra = rebase --abort
+    pr = push review
+    aa = add --all
+    st = status
+    lg = log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset' --all
