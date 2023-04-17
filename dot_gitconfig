@@ -1,3 +1,7 @@
+[push]
+    autoSetupRemote = true
+    default = upstream
+    rebase = true
 [color]
     ui = true
     diff = true
@@ -10,15 +14,19 @@
 [include]
     path = ~/.config.local/local_gitconfig
 [alias]
+    ph = "!fct push"
+    tm = "!git cf master; git pull"
+    td = "!git cf deploy-test; git pull"
     localCfg = config -f ~/.config.local/local_gitconfig
     mg = merge
     mc = merge --continue
     ma = merge --abort
     bd = branch -D
     bl = branch -vv --all
-    ft = fetch --prune
+    ft = fetch --all --prune
     co = checkout
     cb = checkout -b
+    cf = "!f() { git ft; git co $1; }; f"
     cm = commit
     cma = commit --amend
     ca = commit --amend
@@ -31,4 +39,5 @@
     pr = push review
     aa = add --all
     st = status
-    lg = log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset' --all
+    lg = log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset'
+    lga = log --graph --pretty='%C(yellow)%h%Creset -%C(auto)%d%Creset %s %C(cyan)(%cr) %C(bold blue)<%an>%Creset' --all

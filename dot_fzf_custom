@@ -6,6 +6,7 @@ _fzf_complete_git() {
     if [[ $ARGS == 'git co'* ]] \
             || [[ $ARGS == 'git mg'* ]] \
             || [[ $ARGS == 'git bd'* ]] \
+            || [[ $ARGS == 'git cf'* ]] \
             || [[ $ARGS == 'git rb'* ]] ; then
         _fzf_complete --reverse --multi -- "$@" < <(
             echo $branches
