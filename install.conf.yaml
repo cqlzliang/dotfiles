@@ -12,4 +12,8 @@
 - create:
     - ~/.config.local
 - shell:
-  - [sh ~/dotfiles/script/install.sh, Installing basic sotware]
+  - 
+    command: sh ~/dotfiles/script/install.sh
+    stdin: true
+    stdout: true
+    description: Installing basic sotware
