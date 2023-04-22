@@ -129,8 +129,8 @@ fi
 # 代理
 # proxy
 export no_proxy="localtest.rs,localtest.me,localtest,localhost,127.0.0.1"
-alias proxy='PROXY_ADDR="http://127.0.0.1:7890";export http_proxy=$PROXY_ADDR;export https_proxy=$PROXY_ADDR;export all_proxy=$PROXY_ADDR'
-alias unproxy='unset all_proxy;unset http_proxy;unset https_proxy'
+alias proxy='PROXY_ADDR=http://127.0.0.1:7890;export http_proxy=$PROXY_ADDR;export https_proxy=$PROXY_ADDR;export all_proxy=$PROXY_ADDR'
+alias unproxy='unset all_proxy http_proxy https_proxy'
 proxy
 # maven 参考链接: https://confluence.zhenguanyu.com/pages/viewpage.action?pageId=35719069
 export MAVEN_OPTS="-Xms256m -Xmx1024m -Dfile.encoding=UTF-8" 
