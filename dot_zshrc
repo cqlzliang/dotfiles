@@ -143,10 +143,21 @@ alias gitclear="git branch --merged origin/master | egrep -v \"(^\\*|master|depl
 export STARSHIP_CONFIG="$HOME/dotfiles/startship.toml"
 eval "$(starship init zsh)"
 
+# bat
+export BAT_THEME=Dracula
+
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+
 
 # 加载本地配置
 if [[ -f ~/.config.local/localEnv.sh ]]; then 
     source ~/.config.local/localEnv.sh
 fi
+
+
+
+# tmux alias
+alias swh="tmux split-window -h"
+alias swv="tmux split-window -v"

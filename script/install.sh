@@ -20,3 +20,19 @@ else
     echo "install tmux plugins"
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 fi
+
+# 如果 bat 未安装, 则安装。/
+if $(/usr/bin/which -s bat) ; then 
+    echo "bat have been installed"
+else 
+    echo "install bat"
+    brew install bat
+fi
+
+# 如果 autojump 未安装，则安装
+if $(/usr/bin/which -s autojump) ; then 
+    echo "autojump have been installed"
+else 
+    brew install autojump
+    echo "install autojump"
+fi
