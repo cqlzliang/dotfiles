@@ -9,6 +9,7 @@
     ~/.zshrc: dot_zshrc
     ~/.gitconfig: dot_gitconfig
     ~/.tmux.conf: dot_tmux_config
+    ~/.vimrc: dot_vimrc
 - create:
     - ~/.config.local
 - shell:
