@@ -8,7 +8,7 @@
 - link:
     ~/.zshrc: dot_zshrc
     ~/.gitconfig: dot_gitconfig
-    ~/.tmux.config: dot_tmux_config
+    ~/.tmux.conf: dot_tmux_config
 - create:
     - ~/.config.local
 - shell:
