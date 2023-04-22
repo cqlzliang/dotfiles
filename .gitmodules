@@ -2,3 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
+[submodule "dracula/iterm"]
+	path = dracula/iterm
+	url = https://github.com/dracula/iterm.git
