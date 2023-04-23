@@ -12,6 +12,9 @@
     ~/.vimrc: dot_vimrc
 - create:
     - ~/.config.local
+    - ~/.vim/files/backup
+    - ~/.vim/files/swap
+    - ~/.vim/files/undo
 - shell:
   - 
     command: sh ~/dotfiles/script/install.sh
