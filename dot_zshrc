@@ -71,9 +71,12 @@ ZSH_THEME=""
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump)
 
 source $ZSH/oh-my-zsh.sh
+
+# atuojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # User configuration
 
@@ -161,3 +164,10 @@ fi
 # tmux alias
 alias swh="tmux split-window -h"
 alias swv="tmux split-window -v"
+
+# Created by `pipx` on 2023-04-28 06:27:35
+export PATH="$PATH:/Users/lizongliang/.local/bin"
+
+# pipx completion
+ eval "$(register-python-argcomplete pipx)"
+

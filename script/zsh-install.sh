@@ -28,3 +28,9 @@ fi
 if [[ ! -e $pluginHome/zsh-autosuggestions ]]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions $pluginHome/zsh-autosuggestions
 fi
+# conda completion
+
+# conda-zsh-completion
+if [[ ! -e $pluginHome/conda-zsh-completion ]]; then
+    git clone https://github.com/esc/conda-zsh-completion $pluginHome/conda-zsh-completion
+fi

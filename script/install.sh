@@ -36,3 +36,14 @@ else
     brew install autojump
     echo "install autojump"
 fi
+
+# 如果 pipx 未安装，则安装
+if $(/usr/bin/which -s pipx) ; then 
+    echo "pipx have been installed"
+else 
+    brew install pipx
+    pipx ensurepath
+    pipx completions
+    echo "install pipx"
+fi
+
