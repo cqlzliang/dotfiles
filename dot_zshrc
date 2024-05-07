@@ -169,5 +169,6 @@ alias swv="tmux split-window -v"
 export PATH="$PATH:/Users/lizongliang/.local/bin"
 
 # pipx completion
- eval "$(register-python-argcomplete pipx)"
+#  eval "$(register-python-argcomplete pipx)"
 
+export PATH=/opt/homebrew/bin:$PATH
